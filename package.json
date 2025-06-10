@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "Full-stack e-commerce web application",
   "scripts": {
-    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev:open\"",
+    "dev:manual": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
     "start": "concurrently \"npm run server:start\" \"npm run client:start\"",
     "build": "npm run client:build",
     "server:dev": "cd server && npm run dev",
     "server:start": "cd server && npm start",
     "client:dev": "cd client && npm run dev",
+    "client:dev:open": "cd client && npm run dev:open",
     "client:build": "cd client && npm run build",
     "client:start": "cd client && npm start",
     "install:all": "npm install && cd server && npm install && cd ../client && npm install"

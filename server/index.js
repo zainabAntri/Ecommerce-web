@@ -14,11 +14,12 @@ app.use(express.urlencoded({ extended: true }));
 let products = [
   {
     id: 1,
-    name: "Laptop",
+    name: "Crystal Buttons",
     price: 999.99,
-    description: "High-performance laptop for work and gaming",
-    category: "Electronics",
-    image: "/images/laptop.jpg",
+    description:
+      "Crystal Buttons are a beautiful and unique way to add a touch of elegance to your home. They are made from high-quality crystal and are sure to impress your guests.",
+    category: "Bespoke",
+    image: "/images/crystal-buttons.jpg",
     stock: 10,
   },
   {
@@ -230,9 +231,24 @@ app.get("/api/health", (req, res) => {
 });
 
 // Start server
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log(`🚀 Server is running on port ${PORT}`);
   console.log(`📱 API available at http://localhost:${PORT}/api`);
+});
+
+// Handle server shutdown gracefully
+process.on("SIGTERM", () => {
+  console.log("SIGTERM received, shutting down gracefully");
+  server.close(() => {
+    console.log("Process terminated");
+  });
+});
+
+process.on("SIGINT", () => {
+  console.log("SIGINT received, shutting down gracefully");
+  server.close(() => {
+    console.log("Process terminated");
+  });
 });
 
 module.exports = app;
