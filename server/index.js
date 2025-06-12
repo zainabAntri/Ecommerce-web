@@ -14,31 +14,63 @@ app.use(express.urlencoded({ extended: true }));
 let products = [
   {
     id: 1,
-    name: "Crystal Buttons",
-    price: 999.99,
+    name: "Premium Laptop",
+    price: 299.99,
     description:
-      "Crystal Buttons are a beautiful and unique way to add a touch of elegance to your home. They are made from high-quality crystal and are sure to impress your guests.",
-    category: "Bespoke",
-    image: "/images/crystal-buttons.jpg",
-    stock: 10,
+      "High-performance laptop featuring a vibrant display with stunning visual effects. Perfect for creative professionals, gaming, and productivity tasks. Sleek design with powerful performance.",
+    category: "Electronics",
+    image: "/images/product1.jpg",
+    stock: 25,
   },
   {
     id: 2,
-    name: "Smartphone",
-    price: 699.99,
-    description: "Latest smartphone with advanced features",
+    name: "Luxury Smartphone",
+    price: 499.99,
+    description:
+      "Cutting-edge smartphone with sleek blue design and advanced features. High-resolution display, powerful camera system, and long-lasting battery life for all your mobile needs.",
     category: "Electronics",
-    image: "/images/smartphone.jpg",
-    stock: 15,
+    image: "/images/product2.jpg",
+    stock: 18,
   },
   {
     id: 3,
-    name: "Running Shoes",
-    price: 129.99,
-    description: "Comfortable running shoes for athletes",
-    category: "Sports",
-    image: "/images/shoes.jpg",
-    stock: 20,
+    name: "Professional Headphones",
+    price: 179.99,
+    description:
+      "Premium over-ear headphones delivering exceptional audio quality. Comfortable design with superior sound isolation, perfect for music enthusiasts and audio professionals.",
+    category: "Electronics",
+    image: "/images/product3.jpg",
+    stock: 30,
+  },
+  {
+    id: 4,
+    name: "Earbuds",
+    price: 249.99,
+    description:
+      "Fancy earbuds with a stylish design and high-quality audio. Perfect for music lovers and gamers.",
+    category: "Electronics",
+    image: "/images/product4.jpg",
+    stock: 15,
+  },
+  {
+    id: 5,
+    name: "Professional Tablet",
+    price: 89.99,
+    description:
+      "Sleek tablet with vibrant display and powerful performance. Perfect for creative work, entertainment, and productivity on the go. Lightweight design with all-day battery life.",
+    category: "Electronics",
+    image: "/images/product5.jpg",
+    stock: 40,
+  },
+  {
+    id: 6,
+    name: "Smart Fitness Watch",
+    price: 149.99,
+    description:
+      "Advanced smartwatch with comprehensive health tracking and smart features. Monitor your fitness, receive notifications, and stay connected with style and functionality.",
+    category: "Wearables",
+    image: "/images/product6.jpg",
+    stock: 12,
   },
 ];
 

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Full-stack e-commerce web application",
   "scripts": {
-    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev:open\"",
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\" \"npm run open:browser\"",
     "dev:manual": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
     "start": "concurrently \"npm run server:start\" \"npm run client:start\"",
     "build": "npm run client:build",
@@ -13,12 +13,15 @@
     "client:dev:open": "cd client && npm run dev:open",
     "client:build": "cd client && npm run build",
     "client:start": "cd client && npm start",
+    "open:browser": "wait-on http://localhost:3000 && open-cli http://localhost:3000",
     "install:all": "npm install && cd server && npm install && cd ../client && npm install"
   },
   "keywords": ["e-commerce", "react", "nextjs", "express", "nodejs"],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^9.1.2"
+    "concurrently": "^9.1.2",
+    "wait-on": "^8.0.1",
+    "open-cli": "^8.0.0"
   }
 } 
